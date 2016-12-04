@@ -1,0 +1,17 @@
+<% if @user.favorites.empty? %>
+	<div class="list-group-item">
+	まだお気に入りされた投稿はありません
+	</div>
+<% end %>
+
+<% @user.favorites.map{|f| f.tweet}.each do |t| %>
+	<h4 class="user">
+    	<span class="user-email">
+          <%= link_to t.user.email, user_path(t.user) %>
+        </span>
+    <span class="user-id"><%= t.user.email %></span>
+    </h4>
+    <div class="post-body">
+        <%= t.body %>
+    </div>  
+<% end %>

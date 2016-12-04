@@ -16,13 +16,13 @@ gem 'coffee-rails', '~> 4.1.0'
 
 
 # therubyracerを追加
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # deviseを追加
-
+gem 'devise'
 
 # kaminariを追加
-
+gem 'kaminari'
 
 
 # Use jquery as the JavaScript library
