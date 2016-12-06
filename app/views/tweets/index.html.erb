@@ -70,7 +70,7 @@
               <span class="user-name">              
                 <strong>
                   <!-- ↓ツイートに紐付いたUserのemailの表示 -->
-                  <%= t.user.email %>
+                  <%=link_to t.user.email, user_path(t.user_id) %>
                 </strong>
               </span>
               <span class="time pull-right">

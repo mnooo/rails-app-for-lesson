@@ -10,8 +10,11 @@ Rails.application.routes.draw do
 # 発展課題
   # resourcesを制限する場合
     resources :users, only: [:index, :show] do
+      resource :relationships, only: [:create, :destroy]
       member do
         get :favorites
+        get :follows
+        get :followers
       end
     end
 
